@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community-Skill Swap: Let's Barter Our Skills</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Community-Skill Swap</h1>
+        <p>Let's Barter Our Skills</p>
+        <nav>
+            <button id="signup-btn">Sign Up</button>
+            <button id="login-btn">Login</button>
+            <button id="logout-btn" class="hidden">Logout</button>
+        </nav>
+    </header>
+
+    <main>
+        <div id="signup-form" class="hidden">
+            <h2>Sign Up</h2>
+            <form id="signup">
+                <label for="signup-email">Email:</label>
+                <input type="email" id="signup-email" name="email" required><br><br>
+
+                <label for="signup-username">Username:</label>
+                <input type="text" id="signup-username" name="username" required><br><br>
+
+                <label for="signup-password">Password:</label>
+                <input type="password" id="signup-password" name="password" required><br><br>
+
+                <button type="submit">Sign Up</button>
+            </form>
+            <p id="signup-msg"></p>
+        </div>
+
+        <div id="login-form" class="hidden">
+            <h2>Login</h2>
+            <form id="login">
+                <label for="login-email">Email:</label>
+                <input type="email" id="login-email" name="email" required><br><br>
+
+                <label for="login-password">Password:</label>
+                <input type="password" id="login-password" name="password" required><br><br>
+
+                <button type="submit">Login</button>
+            </form>
+            <p id="login-msg"></p>
+        </div>
+
+        <div id="profile-form" class="hidden">
+            <h2>Your Profile</h2>
+            <form id="profile">
+                <label for="profile-name">Full Name:</label>
+                <input type="text" id="profile-name" name="name" required><br><br>
+
+                <label for="profile-bio">Bio:</label>
+                <textarea id="profile-bio" name="bio"></textarea><br><br>
+
+                <h3>Skills Offered:</h3>
+                <div id="skills-offered">
+                    <!-- Skills offered checkboxes will be dynamically added here -->
+                </div>
+
+                <h3>Skills Wanted:</h3>
+                <div id="skills-wanted">
+                    <!-- Skills wanted checkboxes will be dynamically added here -->
+                </div>
+
+                <button type="submit">Update Profile</button>
+            </form>
+        </div>
+
+        <div id="recommended-profiles" class="hidden">
+            <h2>Recommended Profiles</h2>
+            <div id="profile-list">
+                <!-- Recommended profiles will be dynamically added here -->
+            </div>
+        </div>
+
+        <div id="skill-test" class="hidden">
+            <h2>Skill Test</h2>
+            <div id="test-question"></div>
+            <input type="text" id="test-answer" placeholder="Your answer">
+            <button id="submit-answer">Submit Answer</button>
+            <p id="test-result"></p>
+        </div>
+
+        <div id="chat-interface" class="hidden">
+            <h2>Chat with <span id="chat-partner"></span></h2>
+            <div id="chat-messages">
+                <!-- Chat messages will be displayed here -->
+            </div>
+            <input type="text" id="message-input" placeholder="Type your message...">
+            <button id="send-button">Send</button>
+            <button id="video-call-button">Start Video Call (Placeholder)</button>
+        </div>
+
+        <div id="feedback-form" class="hidden">
+            <h2>Give Feedback to <span id="feedback-partner"></span></h2>
+            <textarea id="feedback-text" placeholder="Your feedback..."></textarea><br>
+            <label for="feedback-rating">Rating (1-5):</label>
+            <input type="number" id="feedback-rating" min="1" max="5"><br>
+            <button id="submit-feedback">Submit Feedback</button>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2024 Community-Skill Swap</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
